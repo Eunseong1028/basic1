@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 한줄복사 : alt + shift + ↓ */
+        *{margin: 0; padding: 0;}
+        .부모 {
+            background-color:blue;
+            /* border: 굵기 스타일 컬러; 선, 라인 */
+            border:5px solid red;
+            width: 1000px;
+            margin: auto;
+            /* margin 은 하위의 4가지
+            margin-right
+            margin-left
+            margin-top
+            margin-bottom 를 모두 포함한다 */
+        }
+        .일동{background-color:purple; width: 300px;
+        float:right;
+        }
+        .이동{background-color: aqua; width: 300px;
+            float:right;}
+        .삼동{background-color:coral; width: 300px;
+            float:right;}
+
+        /* 자식은 부모의 넓이를 따라간다 
+        부모는 자식의 높이를 따라간다 
+        */
+        .효자{clear:both;}
+
+        /* 정렬하기
+        float: none ; float: left ; float: right ; */
+        
+        .동생{
+            width: 1000px;
+            border: 5px solid blue;
+            background-color:fuchsia;
+            margin-top: 50px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* 띄워쓰기 : 자손중에 찾음
+            > : .동생>.일철 {}  : 자식 중에 찾음(손자, 증손자 X)
+            .놀부.형: 클래스명이 놀부면서 형인 것 (띄어쓰기 없을 경우)
+         */
+        .동생 .일철{}
+        .동생>.동생자식{ width: 300px; 
+            height: 300px;
+            float: left; background-color: aqua;}
+        .동생>.일철{margin-right: 20px;}
+        .동생>.이철{margin-right: 20px;
+        background-image: url(https://cdn.gukjenews.com/news/photo/202312/2868299_2924846_390.jpg);
+        background-size: cover;}
+        .동생>.삼철 img{width: 100%; height: 100%;}
+
+        .영역{background-color: #F79BD3;}
+        .영역 .세아들{background-color: #EA1179;}
+        .영역 .세아들 em{background-color: #241468;
+        width: 200px;
+        }
+
+        /* tag(태그, 요소(element))의 종류
+        1) block -> 공간 인식, 태어날 때부터 부모의 넓이를 모두 차지함
+        2) inline -> block 요소 안에 적용하는 태그, 공간에 대한 인식 X 
+        3) inline-block -> 인라인 요소처럼 안에 들어가지만 블록처럼 공간에 대한 인식을 함
+         */
+
+
+        .영역 .세아들 strong{background-color: #9F0D7F;
+        width: 100px; display: inline-block;
+        }
+
+        .막내{background-color: #40679E; width: 1000px; 
+            /* 
+               margin: 상하좌우; (값 1개)
+               margin: 상하   좌우; (값 2개) 
+               margin: 상   좌우  하;
+               margin: 상 우 하 좌; (시계방향) 
+            */
+            margin: 100px auto 0;
+        }
+        
+        .막내 .child.child1{}
+        .막내 .child1{float: left; 
+            width: 25%; background-color: #FFCAD4;}
+        .막내 .child2{float: left; 
+            width: 25%; background-color: #FFCAD4;}
+        .막내 .child3{float: left; 
+            width: 25%; background-color: #FFCAD4;}
+        .막내 .child4{float: left; 
+            width: 25%; background-color: #FFCAD4;}
+        .막내 .약{clear: both;}
+
+
+        /* :before, :after는 css로 만드는 가상 공간이다. 화면에는 나타난다. 인라인 요소 */
+
+        /* .D::before{content: "A";} */
+        /* clear: both;는 block 요소여야 적용이 됨 */
+        .약::after{content: ""; clear: both; display: block;}
+    </style>
+</head>
+
+<body>
+    <!-- 한줄 지우기 -->
+    <div class="A 부모">
+        <div class="B 일동">일동</div>
+        <div class="C 이동">이동</div>
+        <div class="D 삼동">삼동</div>
+        <div class="E 효자"></div>
+    </div>
+
+    <div class="B 동생 약">
+        <div class="동생자식 일철">일철</div>
+        <div class="동생자식 이철">이철</div>
+        <div class="동생자식 삼철">
+            <img src="https://cdn.gukjenews.com/news/photo/202312/2868299_2924846_390.jpg" alt="이미지오류">
+        </div>
+        <!-- <div class="효자"></div> -->
+        
+    </div>
+
+    <div class="C 영역">
+        <div class="세아들">세 <em>좋은</em>  아들
+                <strong>있어요</strong>
+        </div>
+    </div>
+
+    <div class="막내 약">
+        <div class="child child1">child1</div>
+        <div class="child child2">child2</div>
+        <div class="child child3">child3</div>
+        <div class="child child4">child4</div>
+    </div>
+</body>
+
+</html>
