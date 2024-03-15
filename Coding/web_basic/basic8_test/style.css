@@ -1,0 +1,24 @@
+*{margin: 0;padding: 0;}
+
+.효자::after{content: ""; clear: both; display: block;}
+
+.전체영역 .일동{background-color: gray; width: 1000px;
+margin: 0 auto; padding: 20px; padding-bottom: 50px;}
+
+.전체영역 .일동 .일일{width: 30%; background-color: green;
+height: 200px; float: left;
+margin-right: 5%; }
+
+.전체영역 .일동 .일이{width: 30%; background-color: green;
+    height: 200px; float: left;
+    margin-right: 5%; }
+
+.전체영역 .일동 .일삼{width: 30%; background-color: green;
+    height: 200px; float: left;}
+    
+.전체영역 .이동{background-color: rgb(255, 238, 0); width: 900px; margin: 0 auto; padding: 10px; margin-bottom: 50px;}
+
+.전체영역 .이동 .이일{background-color: blue; width: 21.25%; height: 200px; float: left; position: relative; margin-right: 5%;}
+.전체영역 .이동 .이이{background-color: blue; width: 21.25%; height: 200px; float: left; position: relative; margin-right: 5%;}
+.전체영역 .이동 .이삼{background-color: blue; width: 21.25%; height: 200px; float: left; position: relative; margin-right: 5%;}
+.전체영역 .이동 .이사{background-color: blue; width: 21.25%; height: 200px; float: left; position: relative;}

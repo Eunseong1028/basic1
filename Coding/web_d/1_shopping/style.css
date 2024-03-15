@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+.container{width: 1200px; margin: 0 auto;}
+
+html,body{font-size: 14px; color: #333;}
+
+img{width: 100%;}
+
+a{color: #333; text-decoration: none;}
+
+li{list-style: none;}
+
+
+/* 
+상대경로 -> 설정하는 곳의 위치가 중요
+/ -> root자리
+./ -> 같은 동급
+../ -> 한단계 올라감
+../../ -> 두단계 올라감
+ */
+
+/* 
+절대경로 -> 위치와 관계없이 주소값으로 연결
+인터넷 링크 같은 종류
+ */
+
+
+
+/* header */
+.header{height: 100px;
+border-top: 5px solid #333;
+border-bottom: 1px solid #333;
+box-sizing: border-box;
+}
+.header h1{float: left; width: 400px; height: 100%;
+padding-top: 27px; box-sizing: border-box}
+
+.header .gnb{float: right;}
+.header .gnb>ul{}
+.header .gnb>ul>li{
+    position: relative;
+    float: left; width: 150px; height: 94px; text-align: center; line-height: 94px; 
+}
+
+.header .gnb>ul>li>a{font-size: 18px; 
+font-weight: bold; color: #666;
+}
+.header .gnb>ul>li>a:hover{
+color: #222;
+}
+
+.header .gnb .submenu{
+    display: none; /* 화면에서 사라짐, 애니효과 안걸림 */
+    position: absolute;
+    top: 94px;left: 0;
+    background-color: white;
+    border: 1px solid #666;
+}
+.header .gnb .submenu li{height: 40px; line-height: 40px;}
+.header .gnb .submenu li a{
+    width: 150px; display: block; color: #666;
+}
+.header .gnb .submenu li a:hover{
+    background-color: #ededed; color: #222;
+}
+
+
+/* inline요소 -> 공간에 대한 개념이 없음
+>> inline요소인데 공간을 인식함 -> button, img */
+
+/* end header */
+
+
+.main{
+    height: 300px; background-color:aqua;
+}
+
+/* tap */
+.tap{height: 350px; padding-top: 10px;}
+.tap .btn{}
+.tap .btn li{float: left;}
+.tap .btn li.first{padding-right: 20px; margin-right: 20px;
+position: relative;}
+.tap .btn li.first::after{content: "";
+position: absolute; right: 0; top: 11px;
+width: 1px; height: 16px;
+background-color: #333;
+}
+.tap .btn li a{font-size: 24px; color: #999; 
+    font-weight: bold;}
+.tap .btn li.active a{color: #333;}
+
+
+.bwrap{margin-top: 20px;}
+.bwrap .best{}
+.bwrap .new{display: none;}
+
+.bwrap ul{padding-left: 20px;}
+.bwrap ul li{float: left; width: 200px; height: 290px;
+margin-right: 30px; text-align: center;
+}
+.bwrap ul li a{}
+.bwrap ul li a img{margin-bottom: 10px; transition: 0.3s;}
+.bwrap ul li:hover a img{opacity: 0.5;}
+.bwrap ul li a p{margin-bottom: 10px;}
+.bwrap ul li a del{color: #999;}
+.bwrap ul li a span{}
+
+.bwrap ul li.last{margin-right: 0;}
+
+
+/* contents */
+.contents{}
+.contents>div{float: left; width: 400px; height: 200px;
+font-size: 12px; box-sizing: border-box; 
+}
+.contents>div.notice{
+    padding: 0 20px;
+}
+.contents>div.notice h2{
+    height: 50px;
+    line-height: 50px; 
+    border-bottom: 1px solid #999;
+    font-size: 18px; font-weight: bold;
+    box-sizing: border-box;
+}
+.contents>div.notice ul{}
+.contents>div.notice ul li{line-height: 30px; 
+    overflow: hidden; /* float인한 깨짐 방지 = height: 30px 으로 처리해도 됨 */
+    
+}
+.contents>div.notice ul li a{float: left; display: block;}
+.contents>div.notice ul li .date{float: right; display: block;}
+
+.contents>div.banner{}
+.contents>div.now{}
+
+/* end contents */
