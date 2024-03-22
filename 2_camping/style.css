@@ -53,6 +53,8 @@ float: left;
     width: 150px; height: 200px;
     border-top:1px solid #ccc;
     border-bottom:1px solid #ccc;
+    z-index: 100;
+    background-color: #fff;
 } 
 .header .gnb li:first-child .subnav{border-left: 1px solid #ccc;}
 .header .gnb li:last-child .subnav{border-right: 1px solid #ccc;}
@@ -105,3 +107,24 @@ line-height: 49px;}
 .contents .board .btn li.active a{color: #0b7245;
 border-bottom: 3px solid #0b7245;
 }
+
+.notice{}
+.notice ul{}
+.notice ul li{
+    position: relative;
+    height: 30px; line-height: 30px; padding-left: 7px;}
+.notice ul li::before{
+    content: "";
+    width: 2px; height: 2px; background-color: #222;
+    position: absolute; left: 0;top: 15px;
+}
+.notice ul li a{float: left; font-size: 12px;}
+.notice ul li .date{float: right; font-size: 12px;
+padding-right: 10px;
+}
+
+.gallery{display: none;}
+.gallery ul{padding: 25px 0;}
+.gallery ul li{float: left; margin: 0 10px;}
+.gallery ul li a{}
+.gallery ul li a:hover img{opacity: 0.5;}

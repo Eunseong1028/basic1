@@ -50,3 +50,12 @@ setInterval(function(){
         top:slidePosition
     },1000)
 }, 3000)
+
+
+// 탭메뉴
+// $('.btn li').click(function(){실행문})  
+//.btn li 중 어떤 li라도 클릭하면 어떤 실행문이 실행됨
+
+$('.btn li').click(function(){
+    console.log('토요일이당')
+})  
