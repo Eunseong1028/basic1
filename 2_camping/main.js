@@ -57,5 +57,21 @@ setInterval(function(){
 //.btn li 중 어떤 li라도 클릭하면 어떤 실행문이 실행됨
 
 $('.btn li').click(function(){
-    console.log('토요일이당')
+    $('.btn li').removeClass('active') //두 개의 li의 class명 active로 모두 지움
+    $(this).addClass('active') //클릭한 li에게 class명 active를 추가
+
+    var index= $(this).index(); //태어날 때부터 부여된 번호 -> index번호
+    console.log(index)
+
+    $('.bwrap>div').hide() //두 개의 div를 모두 지움
+    $('.bwrap>div').eq(index).show()
 })  
+
+//팝업창
+$('.popupOpen').click(function(){
+    $('.popup').show();
+});
+
+$('.close').click(function(){
+    $('.popup').hide();
+})

@@ -128,3 +128,38 @@ padding-right: 10px;
 .gallery ul li{float: left; margin: 0 10px;}
 .gallery ul li a{}
 .gallery ul li a:hover img{opacity: 0.5;}
+
+
+/* footer */
+.footer{background-color: #333; line-height: 100px;}
+.footer>*{ /* footer의 바로 밑 하위요소 모두 다  */
+float: left; height: 100px;
+width: 200px;
+}
+.footer h2{}
+.footer h2 a{}
+.footer h2 a img{}
+
+.footer p{color: #fff; width: 800px; text-align: center;}
+
+.footer ul{}
+.footer ul li{float: left; margin-right: 10px;}
+.footer ul li:last-child{margin-right: 0;}
+.footer ul li a{font-size: 12px;}
+.footer a{color: #fff;}
+
+
+/* popup */
+.popup{
+    display: none;
+    position: fixed; 
+    top: 200px; 
+    left: 0; right: 0;   
+    width: 400px; height: 400px;
+    background-color: #fff; 
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup div{font-size: 16px;}
+.popup .close{position: absolute; right: 20px; bottom: 20px;}
